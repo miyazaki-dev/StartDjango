@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse("Hello World")
+    my_dict = {
+        'insert_something':"views.pyのinsert_something部分です。"
+    }
+    return render(request,'webtestapp/index.html',my_dict)
